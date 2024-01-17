@@ -17,7 +17,7 @@ SECRET_KEY = 'django-insecure-3b29vu0k44@89*z&er6p@ude_tq=rzm6)zx!@6jeevdfk2&wb*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -131,3 +131,6 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = env("EMAIL")
 EMAIL_HOST_PASSWORD = env("EMAIL_PASSWORD")
+
+
+# pip freeze | py -c "for p in __import__('sys').stdin: print(p.split('=')[0])" for package without version 
